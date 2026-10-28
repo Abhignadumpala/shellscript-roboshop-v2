@@ -4,6 +4,8 @@ app_name=shipping
 source ./common.sh
 check_root
 
+export MAVEN_OPTS="-Djdk.tls.namedGroups=x25519,secp256r1,secp384r1"    # FIX: X25519MLKEM768 keypair error in mvn
+
 app_setup
 java_setup
 
