@@ -8,7 +8,7 @@ Environment=CART_ENDPOINT=cart.DOMAIN_NAME:8080
 Environment=DB_HOST=mysql.DOMAIN_NAME
 Environment=DB_USER=shipping
 Environment=DB_PASSWORD=RoboShop@1
-ExecStart=/bin/java -jar /app/shipping.jar
+ExecStart=/bin/java -Djdk.tls.namedGroups=x25519,secp256r1,secp384r1 -jar /app/shipping.jar
 SyslogIdentifier=shipping
 Restart=on-failure
 RestartSec=5
